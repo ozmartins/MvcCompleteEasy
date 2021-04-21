@@ -15,8 +15,10 @@ namespace MvcCompleteEasy.Models
 
         [Required(ErrorMessage = "The field {0} is mandatory")]
         [StringLength(14, ErrorMessage = "The field {0} must to have between {2} and {1} characters.", MinimumLength = 11)]
+        [DisplayName("Document ID")]
         public string DocumentId { get; set; }
-        
+
+        [DisplayName("Document type")]
         public DocumentType DocumentType { get; set; }
         
         public Address Address { get; set; }
